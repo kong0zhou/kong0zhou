@@ -18,7 +18,7 @@ func execCommand(commandName string, params []string) bool {
 	cmd := exec.Command(commandName, params...)
 
 	//显示运行的命令
-	fmt.Println(cmd.Args)
+	// fmt.Println(cmd.Args)
 
 	stdout, err := cmd.StdoutPipe() //接收命令在控制行里输出的数据（字符串）
 
