@@ -4,12 +4,11 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"os"
 	"os/exec"
 )
 
 func main() {
-	os.Chdir("../shell")
+	// os.Chdir("../shell")
 	params := make([]string, 1)
 	params[0] = "php.sh"
 	execCommand("/bin/bash", params)

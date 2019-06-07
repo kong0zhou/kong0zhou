@@ -1,4 +1,3 @@
-cd ..
 PHP=`pwd`
 docker run --name php \
 	--rm \
