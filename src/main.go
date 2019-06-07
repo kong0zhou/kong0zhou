@@ -26,13 +26,12 @@ func execCommand(commandName string, params []string) bool {
 		fmt.Println(err)
 		return false
 	}
-
 	cmd.Start()
 
+	cmd.Wait()
 	reader, _ := ioutil.ReadAll(stdout)
 	s := string(reader) + "454564"
 	fmt.Println(s)
 
-	cmd.Wait()
 	return true
 }
