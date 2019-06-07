@@ -1,9 +1,8 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"os/exec"
 )
 
@@ -30,16 +29,10 @@ func execCommand(commandName string, params []string) bool {
 
 	cmd.Start()
 
-	reader := bufio.NewReader(stdout)
+	reader, _ := ioutil.ReadAll(stdout)
 
 	//实时循环读取输出流中的一行内容(即打印到控制的数据)
-	for {
-		line, err2 := reader.ReadString('\n')
-		if err2 != nil || io.EOF == err2 {
-			break
-		}
-		fmt.Println("hey:", line)
-	}
+	fmt.Println(string(reader))
 
 	cmd.Wait()
 	return true
