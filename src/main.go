@@ -30,9 +30,8 @@ func execCommand(commandName string, params []string) bool {
 	cmd.Start()
 
 	reader, _ := ioutil.ReadAll(stdout)
-
-	//实时循环读取输出流中的一行内容(即打印到控制的数据)
-	fmt.Println(string(reader))
+	s := string(reader) + "454564"
+	fmt.Println(s)
 
 	cmd.Wait()
 	return true
