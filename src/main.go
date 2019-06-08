@@ -15,7 +15,7 @@ func main() {
 	PHP=$(pwd)
 	docker run --name php \
 		--rm \
-		-it \
+		-i \
 		-v $PHP/code:/code \
 		php \
 		php /code/index.php`
