@@ -11,7 +11,6 @@ func main() {
 	params := make([]string, 2)
 	params[0] = "-c"
 	params[1] = `
-	echo "shdfkjshdf"
 	PHP=$(pwd)
 	docker run --name php \
 		--rm \
