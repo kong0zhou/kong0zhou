@@ -32,6 +32,7 @@ func execCommand(commandName string, params []string) bool {
 	fmt.Println(cmd.Args)
 	out, err := cmd.CombinedOutput()
 	if err != nil {
+		fmt.Println(err)
 		return false
 	}
 	fmt.Println(string(out))
