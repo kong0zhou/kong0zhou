@@ -6,14 +6,11 @@ import (
 )
 
 func main() {
-	cmd := exec.Command("/bin/bash", "-c", "php.sh")
-	//显示运行的命令
-	// fmt.Println(cmd.Args)
-	out, err := cmd.Output()
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(string(out))
+	// os.Chdir("../shell")
+	params := make([]string, 1)
+	params[0] = "php.sh"
+	b := execCommand("/bin/bash", params)
+	fmt.Println(b)
 }
 
 func execCommand(commandName string, params []string) bool {
