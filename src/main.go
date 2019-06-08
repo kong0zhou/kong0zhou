@@ -16,7 +16,10 @@ func execCommand(commandName string, params []string) bool {
 	cmd := exec.Command(commandName, params...)
 	//显示运行的命令
 	// fmt.Println(cmd.Args)
-	out, _ := cmd.Output()
+	out, err := cmd.Output()
+	if err != nil {
+		fmt.Println(err)
+	}
 	fmt.Println(string(out))
 	return true
 }
