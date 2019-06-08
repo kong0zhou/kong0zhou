@@ -20,7 +20,7 @@ func execCommand(commandName string, params []string) bool {
 	out, err := cmd.Output()
 	if err != nil {
 		fmt.Println(err)
-		return false
+		fmt.Println("45646416")
 	}
 	fmt.Println(string(out))
 	return true
