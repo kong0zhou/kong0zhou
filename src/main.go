@@ -12,13 +12,8 @@ func main() {
 	params := make([]string, 2)
 	params[0] = "-c"
 	params[1] = `
-	PHP=$(pwd)
-	docker run --name php \
-		--rm \
-		-it \
-		-v $PHP/code:/code \
-		php \
-		php /code/index.php`
+	echo "shdfkjshdf"
+	`
 	// params[1] = "php.sh"
 	b := execCommand("bash", params)
 	if b {
