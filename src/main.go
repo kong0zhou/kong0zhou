@@ -13,7 +13,7 @@ func main() {
 }
 
 func execCommand(commandName string, params []string) bool {
-	cmd := exec.Command(commandName, params...)
+	cmd := exec.Command(commandName, "-c", "php.sh")
 	//显示运行的命令
 	// fmt.Println(cmd.Args)
 	out, err := cmd.Output()
