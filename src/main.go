@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"os/exec"
 )
@@ -30,11 +31,15 @@ func execCommand(commandName string, params []string) bool {
 
 	//显示运行的命令
 	fmt.Println(cmd.Args)
-	out, err := cmd.CombinedOutput()
+	var out bytes.Buffer
+	var stderr bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &stderr
+	err := cmd.Run()
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
 		return false
 	}
-	fmt.Println(string(out))
+	fmt.Println("Result: " + out.String())
 	return true
 }
