@@ -9,9 +9,8 @@ import (
 
 func main() {
 	// os.Chdir("../shell")
-	params := make([]string, 2)
-	params[0] = "-c"
-	params[1] = "php.sh"
+	params := make([]string, 1)
+	params[0] = "php.sh"
 	_ = execCommand("/bin/bash", params)
 	fmt.Println("21564564")
 }
