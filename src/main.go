@@ -11,7 +11,7 @@ func main() {
 	// os.Chdir("../shell")
 	params := make([]string, 1)
 	params[0] = "php.sh"
-	_ = execCommand("/bin/bash", params)
+	_ = execCommand("bash", params)
 	fmt.Println("21564564")
 }
 
