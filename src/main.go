@@ -40,6 +40,6 @@ func execCommand(commandName string, params []string) bool {
 		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
 		return false
 	}
-	fmt.Println("Result: " + out.String())
+	fmt.Println(out.String())
 	return true
 }
