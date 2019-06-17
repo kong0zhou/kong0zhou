@@ -5,4 +5,4 @@ docker run --name php \
 	-v $PHP/code:/code \
 	php \
 	php /code/index.php
-	时空节点反抗螺丝钉咖啡碱
+	时空节点反抗
