@@ -26,7 +26,7 @@ function getPageData($url){
   $html = getHtml($url);
   $coding = mb_detect_encoding($html, array("ASCII","GB2312","GBK","UTF-8"));  
   if ($coding != "UTF-8" || !mb_check_encoding($html, "UTF-8"))  $html = mb_convert_encoding($html, 'utf-8', 'GBK,UTF-8,ASCII');
-  $pattern ='https?:\/\/[^,"\'\u4e00-\u9fa5<\n]*';
+  $pattern ='/https?:\/\/[^,"\'<\n]*/';
   preg_match_all($pattern,$html,$result_array);
   return $result_array;
 }
