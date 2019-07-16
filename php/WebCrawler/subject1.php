@@ -24,11 +24,19 @@ function getHtml($url){
 function getPageData($url){
   // 获取整个网页内容
   $html = getHtml($url);
-  preg_match_all("/<p.*>.*<\/p>/",$html,$result_array);
+  $coding = mb_detect_encoding($html, array("ASCII","GB2312","GBK","UTF-8"));  
+  if ($coding != "UTF-8" || !mb_check_encoding($html, "UTF-8"))  $html = mb_convert_encoding($html, 'utf-8', 'GBK,UTF-8,ASCII');
+  $pattern ='https?:\/\/[^,"\'\u4e00-\u9fa5<\n]*';
+  preg_match_all($pattern,$html,$result_array);
   return $result_array;
 }
 
-$arr = getPageData("https://blog.csdn.net/YDTG1993/article/details/83861629");
-print_r($arr)
+$arr = getPageData("https://tieba.baidu.com/");
+foreach($arr[0] as $i=>$value){
+    echo $i;
+    echo "    ";
+    echo $value;
+    echo "\n";
+}
 
 ?>
