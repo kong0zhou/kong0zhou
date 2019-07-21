@@ -6,39 +6,15 @@ import (
 	"os/exec"
 )
 
-func main() {
-	// os.Chdir("../shell")
-	params := make([]string, 2)
-	params[0] = "-c"
-	params[1] = `
-	PHP=$(pwd)
-	docker run --name php \
-		--rm \
-		-i \
-		-v $PHP/code:/code \
-		php \
-		php /code/index.php`
-	// params[1] = "php.sh"
-	b := execCommand("bash", params)
-	if b {
-		fmt.Println("454545")
-	}
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintln(w, "hello world")
 }
 
-func execCommand(commandName string, params []string) bool {
-	cmd := exec.Command(commandName, params...)
-
-	//显示运行的命令
-	fmt.Println(cmd.Args)
-	var out bytes.Buffer
-	var stderr bytes.Buffer
-	cmd.Stdout = &out
-	cmd.Stderr = &stderr
-	err := cmd.Run()
+func main(){
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", IndexHandler)
+	err = http.ListenAndServe(":8083", mux)
 	if err != nil {
-		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
-		return false
+		fmt.Println("启动失败")
 	}
-	fmt.Println(out.String())
-	return true
 }
