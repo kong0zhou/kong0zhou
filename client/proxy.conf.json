@@ -1,0 +1,10 @@
+{
+  "/log-api": {
+    "target": "http://localhost:8083/",
+    "changeOrigin": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/log-api": ""
+    }
+  }
+}
