@@ -1,0 +1,9 @@
+# fileName 与下面的 filePath 一一对应
+fileName: 
+- kz
+- logShow
+
+filePath: 
+- /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+- /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+logMaxSize: 5000

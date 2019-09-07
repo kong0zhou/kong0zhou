@@ -1,0 +1,9 @@
+<div class="main">
+    <div class="left">
+        <div *ngFor="let v of fileData">
+            <button mat-raised-button color="primary" class="button" (click)="getLogFile(v.path)">{{v.name}}</button>
+        </div>
+    </div>
+    <div class="right" [innerHTML]='logText'>
+    </div>
+</div>

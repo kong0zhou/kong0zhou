@@ -1,0 +1,446 @@
+2019/09/07 14:17:45.301 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 14:17:54.564 [I] [show.go:29]  123
+2019/09/07 15:43:31.451 [I] [show.go:29]  123
+2019/09/07 15:43:33.624 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:43:33.624 [I] [show.go:179]  tailChan is already
+2019/09/07 15:43:33.624 [I] [show.go:218]  tailChan is get
+2019/09/07 15:43:43.178 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:43:43.179 [I] [show.go:179]  tailChan is already
+2019/09/07 15:43:43.180 [I] [show.go:218]  tailChan is get
+2019/09/07 15:43:44.492 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:43:44.498 [I] [show.go:179]  tailChan is already
+2019/09/07 15:43:44.498 [I] [show.go:218]  tailChan is get
+2019/09/07 15:43:52.402 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:43:52.403 [I] [show.go:179]  tailChan is already
+2019/09/07 15:43:52.409 [I] [show.go:218]  tailChan is get
+2019/09/07 15:43:56.219 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:43:56.219 [I] [show.go:179]  tailChan is already
+2019/09/07 15:43:56.219 [I] [show.go:218]  tailChan is get
+2019/09/07 15:44:07.622 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:44:07.622 [I] [show.go:179]  tailChan is already
+2019/09/07 15:44:07.622 [I] [show.go:218]  tailChan is get
+2019/09/07 15:44:15.451 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:44:15.451 [I] [show.go:179]  tailChan is already
+2019/09/07 15:44:15.451 [I] [show.go:218]  tailChan is get
+2019/09/07 15:47:06.740 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:47:06.740 [I] [show.go:179]  tailChan is already
+2019/09/07 15:47:06.740 [I] [show.go:218]  tailChan is get
+2019/09/07 15:47:25.681 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:47:25.681 [I] [show.go:179]  tailChan is already
+2019/09/07 15:47:25.682 [I] [show.go:218]  tailChan is get
+2019/09/07 15:51:53.342 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:51:53.343 [I] [show.go:179]  tailChan is already
+2019/09/07 15:51:53.343 [I] [show.go:218]  tailChan is get
+2019/09/07 15:51:54.187 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:51:54.187 [I] [show.go:179]  tailChan is already
+2019/09/07 15:51:54.187 [I] [show.go:218]  tailChan is get
+2019/09/07 15:51:54.962 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:51:54.972 [I] [show.go:218]  tailChan is get
+2019/09/07 15:51:54.969 [I] [show.go:179]  tailChan is already
+2019/09/07 15:51:59.253 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:51:59.254 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:52:00.053 [I] [show.go:29]  123
+2019/09/07 15:52:00.908 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:52:00.909 [I] [show.go:179]  tailChan is already
+2019/09/07 15:52:00.909 [I] [show.go:218]  tailChan is get
+2019/09/07 15:53:05.207 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 15:53:08.761 [I] [show.go:29]  123
+2019/09/07 15:53:09.219 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:53:09.219 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:53:09.219 [I] [show.go:180]  tailChan is already
+2019/09/07 15:53:09.219 [I] [show.go:219]  tailChan is get
+2019/09/07 15:53:47.837 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 15:53:52.004 [I] [show.go:29]  123
+2019/09/07 15:53:52.508 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:53:52.508 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:53:52.508 [I] [show.go:180]  tailChan is already
+2019/09/07 15:53:52.509 [I] [show.go:219]  tailChan is get
+2019/09/07 15:53:55.412 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:53:55.413 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:53:55.413 [I] [show.go:180]  tailChan is already
+2019/09/07 15:53:55.413 [I] [show.go:219]  tailChan is get
+2019/09/07 15:53:55.413 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:53:58.198 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:53:58.199 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:53:58.199 [I] [show.go:180]  tailChan is already
+2019/09/07 15:53:58.199 [I] [show.go:219]  tailChan is get
+2019/09/07 15:53:58.200 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:54:44.369 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:54:44.369 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:54:45.169 [I] [show.go:29]  123
+2019/09/07 15:54:45.788 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:54:45.788 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:54:45.789 [I] [show.go:180]  tailChan is already
+2019/09/07 15:54:45.789 [I] [show.go:219]  tailChan is get
+2019/09/07 15:55:41.519 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:55:41.520 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:55:41.520 [I] [show.go:180]  tailChan is already
+2019/09/07 15:55:41.520 [I] [show.go:219]  tailChan is get
+2019/09/07 15:55:41.520 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:55:47.606 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:55:47.606 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:55:47.607 [I] [show.go:180]  tailChan is already
+2019/09/07 15:55:47.607 [I] [show.go:219]  tailChan is get
+2019/09/07 15:55:47.608 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:55:51.586 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:55:51.586 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:55:51.586 [I] [show.go:180]  tailChan is already
+2019/09/07 15:55:51.586 [I] [show.go:219]  tailChan is get
+2019/09/07 15:55:51.587 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:56:55.585 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 15:57:00.460 [I] [show.go:29]  123
+2019/09/07 15:57:00.932 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:57:00.938 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:57:00.938 [I] [show.go:180]  tailChan is already
+2019/09/07 15:57:00.938 [I] [show.go:219]  tailChan is get
+2019/09/07 15:57:01.991 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:57:01.992 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:57:01.992 [I] [show.go:180]  tailChan is already
+2019/09/07 15:57:01.992 [I] [show.go:219]  tailChan is get
+2019/09/07 15:57:01.992 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:57:22.058 [I] [show.go:29]  123
+2019/09/07 15:57:30.640 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:30.640 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:31.174 [I] [show.go:29]  123
+2019/09/07 15:57:32.678 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:32.678 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:33.167 [I] [show.go:29]  123
+2019/09/07 15:57:35.053 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:35.054 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:35.506 [I] [show.go:29]  123
+2019/09/07 15:57:37.253 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:37.253 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:37.639 [I] [show.go:29]  123
+2019/09/07 15:57:39.916 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:39.916 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:40.368 [I] [show.go:29]  123
+2019/09/07 15:57:42.232 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:42.232 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:42.639 [I] [show.go:29]  123
+2019/09/07 15:57:44.026 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:44.026 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:44.425 [I] [show.go:29]  123
+2019/09/07 15:57:45.255 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:45.255 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:45.653 [I] [show.go:29]  123
+2019/09/07 15:57:46.325 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:46.325 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:46.738 [I] [show.go:29]  123
+2019/09/07 15:57:47.465 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:57:47.465 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:57:47.866 [I] [show.go:29]  123
+2019/09/07 15:58:46.936 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:58:46.937 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:58:46.937 [I] [show.go:180]  tailChan is already
+2019/09/07 15:58:46.937 [I] [show.go:219]  tailChan is get
+2019/09/07 15:58:46.938 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:58:55.007 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:58:55.007 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 15:58:55.007 [I] [show.go:180]  tailChan is already
+2019/09/07 15:58:55.008 [I] [show.go:219]  tailChan is get
+2019/09/07 15:58:55.008 [I] [show.go:222]  tail1 is stop
+2019/09/07 15:59:07.044 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:59:07.044 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:59:07.518 [I] [show.go:29]  123
+2019/09/07 15:59:09.297 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 15:59:09.297 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 15:59:09.820 [I] [show.go:29]  123
+2019/09/07 15:59:21.748 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:59:21.748 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 15:59:21.748 [I] [show.go:180]  tailChan is already
+2019/09/07 15:59:21.749 [I] [show.go:219]  tailChan is get
+2019/09/07 15:59:21.750 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:05:06.667 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:05:06.667 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:05:07.355 [I] [show.go:29]  123
+2019/09/07 16:05:25.153 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:05:25.153 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:06:10.153 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:06:10.153 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:06:11.355 [I] [show.go:29]  123
+2019/09/07 16:06:12.305 [I] [show.go:29]  123
+2019/09/07 16:06:23.194 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:06:23.194 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:06:24.082 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:06:24.082 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:06:24.194 [I] [show.go:29]  123
+2019/09/07 16:06:25.361 [I] [show.go:29]  123
+2019/09/07 16:06:38.576 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:06:38.577 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:06:39.063 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:06:39.063 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:06:39.829 [I] [show.go:29]  123
+2019/09/07 16:06:40.180 [I] [show.go:29]  123
+2019/09/07 16:06:45.881 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:06:45.882 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:06:45.882 [I] [show.go:180]  tailChan is already
+2019/09/07 16:06:45.882 [I] [show.go:219]  tailChan is get
+2019/09/07 16:09:11.064 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:11.064 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:11.074 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:11.074 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:12.815 [I] [show.go:29]  123
+2019/09/07 16:09:12.953 [I] [show.go:29]  123
+2019/09/07 16:09:14.299 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:09:14.299 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:09:14.300 [I] [show.go:180]  tailChan is already
+2019/09/07 16:09:14.300 [I] [show.go:219]  tailChan is get
+2019/09/07 16:09:23.030 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:23.030 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:23.106 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:23.106 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:23.782 [I] [show.go:29]  123
+2019/09/07 16:09:24.492 [I] [show.go:29]  123
+2019/09/07 16:09:25.413 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:09:25.413 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:09:25.414 [I] [show.go:180]  tailChan is already
+2019/09/07 16:09:25.414 [I] [show.go:219]  tailChan is get
+2019/09/07 16:09:50.280 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:50.281 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:51.073 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:51.073 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:51.183 [I] [show.go:29]  123
+2019/09/07 16:09:52.204 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:09:52.204 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:09:52.204 [I] [show.go:180]  tailChan is already
+2019/09/07 16:09:52.204 [I] [show.go:219]  tailChan is get
+2019/09/07 16:09:52.282 [I] [show.go:29]  123
+2019/09/07 16:09:57.745 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:57.745 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:58.071 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:09:58.072 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:09:58.312 [I] [show.go:29]  123
+2019/09/07 16:09:59.622 [I] [show.go:29]  123
+2019/09/07 16:12:11.853 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:11.853 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:12.085 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:12.085 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:12.825 [I] [show.go:29]  123
+2019/09/07 16:12:13.364 [I] [show.go:29]  123
+2019/09/07 16:12:16.102 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:16.102 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:16.499 [I] [show.go:29]  123
+2019/09/07 16:12:17.056 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:17.056 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:18.330 [I] [show.go:29]  123
+2019/09/07 16:12:18.480 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:18.480 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:18.978 [I] [show.go:29]  123
+2019/09/07 16:12:53.151 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:53.151 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:54.008 [I] [show.go:29]  123
+2019/09/07 16:12:54.105 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:12:54.105 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:12:55.170 [I] [show.go:29]  123
+2019/09/07 16:13:04.950 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:04.950 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:05.068 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:05.068 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:06.315 [I] [show.go:29]  123
+2019/09/07 16:13:06.806 [I] [show.go:29]  123
+2019/09/07 16:13:10.781 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:10.781 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:11.063 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:11.063 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:11.446 [I] [show.go:29]  123
+2019/09/07 16:13:12.236 [I] [show.go:29]  123
+2019/09/07 16:13:21.462 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:21.462 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:21.886 [I] [show.go:29]  123
+2019/09/07 16:13:22.069 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:22.069 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:23.079 [I] [show.go:29]  123
+2019/09/07 16:13:39.425 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:39.425 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:40.083 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:13:40.083 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:13:40.130 [I] [show.go:29]  123
+2019/09/07 16:13:41.260 [I] [show.go:29]  123
+2019/09/07 16:15:29.209 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:15:29.209 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:15:29.993 [I] [show.go:29]  123
+2019/09/07 16:15:30.132 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:15:30.133 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:15:31.168 [I] [show.go:29]  123
+2019/09/07 16:16:10.144 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:16:10.144 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:16:10.149 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:16:10.149 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:16:12.344 [I] [show.go:29]  123
+2019/09/07 16:16:12.587 [I] [show.go:29]  123
+2019/09/07 16:16:26.090 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:16:26.090 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:16:26.097 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:16:26.097 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:16:26.737 [I] [show.go:29]  123
+2019/09/07 16:16:27.741 [I] [show.go:29]  123
+2019/09/07 16:16:48.834 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:16:48.834 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:16:49.073 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:16:49.073 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:16:50.096 [I] [show.go:29]  123
+2019/09/07 16:16:50.647 [I] [show.go:29]  123
+2019/09/07 16:17:17.082 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:17:17.082 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:17:17.119 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:17:17.119 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:17:18.497 [I] [show.go:29]  123
+2019/09/07 16:17:18.622 [I] [show.go:29]  123
+2019/09/07 16:17:40.687 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:17:40.687 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:17:41.069 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:17:41.069 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:17:41.591 [I] [show.go:29]  123
+2019/09/07 16:17:42.205 [I] [show.go:29]  123
+2019/09/07 16:18:28.085 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:18:28.086 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:18:28.107 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:18:28.107 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:18:30.258 [I] [show.go:29]  123
+2019/09/07 16:18:30.331 [I] [show.go:29]  123
+2019/09/07 16:18:35.586 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:18:35.587 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:18:35.587 [I] [show.go:180]  tailChan is already
+2019/09/07 16:18:35.587 [I] [show.go:219]  tailChan is get
+2019/09/07 16:22:54.079 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:22:54.079 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:22:54.099 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:22:54.099 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:22:56.360 [I] [show.go:29]  123
+2019/09/07 16:22:56.445 [I] [show.go:29]  123
+2019/09/07 16:23:17.849 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:23:17.849 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:23:18.089 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:23:18.089 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:23:19.732 [I] [show.go:29]  123
+2019/09/07 16:23:20.034 [I] [show.go:29]  123
+2019/09/07 16:23:23.196 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:23:23.196 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:23:23.196 [I] [show.go:180]  tailChan is already
+2019/09/07 16:23:23.196 [I] [show.go:219]  tailChan is get
+2019/09/07 16:23:32.508 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:23:32.509 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:23:33.421 [I] [show.go:29]  123
+2019/09/07 16:23:34.961 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:23:34.961 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:23:34.961 [I] [show.go:180]  tailChan is already
+2019/09/07 16:23:34.961 [I] [show.go:219]  tailChan is get
+2019/09/07 16:26:02.763 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:26:02.769 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:26:02.770 [I] [show.go:180]  tailChan is already
+2019/09/07 16:26:02.770 [I] [show.go:219]  tailChan is get
+2019/09/07 16:26:02.770 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:32:09.237 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:09.238 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:09.240 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:09.240 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:09.240 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:32:12.925 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:12.925 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:12.926 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:12.926 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:12.926 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:32:28.206 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:28.206 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:28.206 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:28.207 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:32.290 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:32.290 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:32.290 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:33.130 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:33.130 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:33.131 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:33.740 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:33.740 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:33.740 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:34.223 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:34.223 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:34.223 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:42.243 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:32:42.243 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:32:43.006 [I] [show.go:29]  123
+2019/09/07 16:32:43.989 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:43.989 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:43.990 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:43.990 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:45.690 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:45.690 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:45.690 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:45.690 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:45.690 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:32:49.558 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:49.559 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:32:49.559 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:49.559 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:49.559 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:32:54.692 [I] [show.go:85]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:54.693 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:32:54.693 [I] [show.go:180]  tailChan is already
+2019/09/07 16:32:54.693 [I] [show.go:219]  tailChan is get
+2019/09/07 16:32:54.694 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:34:06.028 [E] [show.go:80]  websocket: close 1001 (going away)
+2019/09/07 16:34:06.028 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:40:01.243 [I] [show.go:85]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:40:01.250 [I] [show.go:125]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:40:01.255 [I] [show.go:180]  tailChan is already
+2019/09/07 16:40:01.256 [I] [show.go:219]  tailChan is get
+2019/09/07 16:40:01.256 [I] [show.go:222]  tail1 is stop
+2019/09/07 16:54:08.727 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 16:54:17.079 [I] [show.go:29]  123
+2019/09/07 16:54:21.447 [E] [show.go:89]  websocket: close 1001 (going away)
+2019/09/07 16:54:21.447 [E] [show.go:45]  websocket: close 1001 (going away)
+2019/09/07 16:54:21.765 [I] [show.go:29]  123
+2019/09/07 16:54:55.569 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 16:55:00.501 [I] [show.go:29]  123
+2019/09/07 16:55:03.600 [I] [show.go:85]  websocket is close websocket: close 1001 (going away)
+2019/09/07 16:55:03.600 [I] [show.go:54]  is close
+2019/09/07 16:55:03.921 [I] [show.go:29]  123
+2019/09/07 16:55:08.604 [I] [show.go:85]  websocket is close websocket: close 1001 (going away)
+2019/09/07 16:55:08.604 [I] [show.go:54]  is close
+2019/09/07 16:55:08.937 [I] [show.go:29]  123
+2019/09/07 16:55:13.598 [I] [show.go:94]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:55:13.598 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:55:13.598 [I] [show.go:189]  tailChan is already
+2019/09/07 16:55:13.599 [I] [show.go:228]  tailChan is get
+2019/09/07 16:55:20.951 [I] [show.go:94]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:55:20.951 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:55:20.952 [I] [show.go:189]  tailChan is already
+2019/09/07 16:55:20.952 [I] [show.go:228]  tailChan is get
+2019/09/07 16:55:20.952 [I] [show.go:231]  tail1 is stop
+2019/09/07 16:57:11.700 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 16:57:18.432 [I] [show.go:29]  123
+2019/09/07 16:57:19.407 [I] [show.go:94]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:57:19.408 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:57:19.408 [I] [show.go:189]  tailChan is already
+2019/09/07 16:57:19.408 [I] [show.go:228]  tailChan is get
+2019/09/07 16:57:22.942 [I] [show.go:94]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:57:22.943 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:57:22.943 [I] [show.go:189]  tailChan is already
+2019/09/07 16:57:22.944 [I] [show.go:228]  tailChan is get
+2019/09/07 16:57:22.944 [I] [show.go:230]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:57:22.944 [I] [show.go:232]  tail1 is stop
+2019/09/07 16:57:59.297 [I] [show.go:94]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:57:59.297 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:57:59.298 [I] [show.go:189]  tailChan is already
+2019/09/07 16:57:59.298 [I] [show.go:228]  tailChan is get
+2019/09/07 16:57:59.298 [I] [show.go:230]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:57:59.298 [I] [show.go:232]  tail1 is stop
+2019/09/07 16:58:03.423 [I] [show.go:94]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:58:03.424 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 16:58:03.424 [I] [show.go:189]  tailChan is already
+2019/09/07 16:58:03.424 [I] [show.go:228]  tailChan is get
+2019/09/07 16:58:03.424 [I] [show.go:230]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 16:58:03.424 [I] [show.go:232]  tail1 is stop
+ahskdhhdkjashj
+2019/09/07 17:41:39.396 [I] [main.go:35]  http服务器启动，端口：8083
+2019/09/07 17:41:47.438 [I] [show.go:29]  123
+2019/09/07 17:41:48.288 [I] [show.go:94]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 17:41:48.289 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 17:41:48.289 [I] [show.go:189]  tailChan is already
+2019/09/07 17:41:48.289 [I] [show.go:228]  tailChan is get
+2019/09/07 17:41:50.367 [I] [show.go:94]  /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 17:41:50.367 [I] [show.go:134]  path: /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+2019/09/07 17:41:50.368 [I] [show.go:189]  tailChan is already
+2019/09/07 17:41:50.368 [I] [show.go:228]  tailChan is get
+2019/09/07 17:41:50.368 [I] [show.go:230]  /home/kongzhou/桌面/kzme/kz/src/logs/log.log
+2019/09/07 17:41:50.368 [I] [show.go:232]  tail1 is stop
