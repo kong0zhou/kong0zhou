@@ -1,60 +1,131 @@
-.main{
-    display:flex;
-    /* height:500px; */
-}
-.left {
-    width: 200px;
-    /* border: 1px solid #555; */
-    /* display: inline-block; */
-    /* overflow: auto; */
-    background: rgb(246, 245, 245);
+.canLookDiv {
+    border: 1px solid rgb(0, 0, 0)
 }
 
-.right{
-    width:98%;
-    border: 1px solid #555;
-    margin:1px;
-    overflow: auto;
+.main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    /* text-align:center; */
+    border: 1px solid rgb(185, 185, 185);
+    z-index: -1;
 }
 
-.example-container {
-    /* border: 1px solid #555; */
-    height: 100%;
+.topFileName {
+    position: absolute;
+    border-radius: 0px 0px 12px 12px;
+    width: 20%;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(185, 185, 185);
+    left: 40%;
+    right: 40%;
+    z-index: 2;
 }
 
-.example-button-row button,
-.example-button-row a {
-  margin-right: 8px;
+.leftDiv {
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    /* width:20%; */
+    z-index: 0;
+    /* 实现可拖动放大缩小 */
+    /* overflow:auto; */
+    /* resize:horizontal; */
+    /* cursor: ew-resize; */
+    /* border:none; */
 }
 
-.button{
-    width:180px;
-    margin-left:10px;
-    margin-right:10px;
-    margin-top:15px;
-    height:30px;
+.fileList ul{
+    list-style-type: none;
+    padding-left: 0px;
 }
 
-.right::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: #61B6EB;
+.fileList li {
+    cursor: pointer;
+    /* margin: ; */
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
-.right::-webkit-scrollbar-track {
-    background: #ffffff;
-    border-radius: 2px;
+/* .fileList li:hover {
+    background-color: #DDD
+} */
+
+.rightDiv {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    /* width:80%; */
+    z-index: -1;
 }
 
-.right::-webkit-scrollbar-thumb {
-    background: #61B6EB;
-    border-radius: 2px;
+.cutOff {
+    border: 0.5px solid rgb(185, 185, 185);
+    width: 0px;
+    position: absolute;
+    top: 0px;
+    bottom: 00px;
+    /* left:20%; */
+    cursor: ew-resize;
 }
 
-.right::-webkit-scrollbar-thumb:hover {
-    background: #61B6EB;
+/*>>>>>>>>>>>>> 文件树css  >>>>>>>>>>>> */
+
+.example-tree-invisible {
+    display: none;
 }
 
-.right::-webkit-scrollbar-corner {
-    background: #61B6EB;
+.example-tree{
+    background-color: rgb(245, 245, 245);
+    margin-left:-10px;
+}
+
+.example-tree ul, .example-tree li {
+    padding-left: 0px;
+    padding-top : 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+    margin-left:7px;
+    padding-bottom:0px;
+    list-style-type: none;
+}
+
+.mat-tree-node {
+    display: flex;
+    align-items: center;
+    min-height: 16px;
+    flex: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.tree-node-li:hover{
+    background-color: #DDD;
+}
+
+.tree-node-li{
+    cursor: pointer;
+}
+
+/*<<<<<<<<<< 文件树css <<<<<<<<<<<<<<<<< */
+
+.icon {
+    flex: 1;
+    width: 16px !important;
+    height: 16px !important;
+}
+.iconDiv{
+    height: 16px !important;
+    width: 16px !important;
+    float: left;
 }
