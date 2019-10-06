@@ -3,7 +3,5 @@ fileName:
 - kz
 - logShow
 
-filePath: 
-- /home/kongzhou/桌面/kzme/kz/src/logs/log.log
-- /home/kongzhou/桌面/kzme/logShow/src/logs/log.log
+dirPath: ./inFiles
 logMaxSize: 5000

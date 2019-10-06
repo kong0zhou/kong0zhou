@@ -1,37 +1,58 @@
 import { Injectable } from '@angular/core';
 // import { Observable } from 'rxjs';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
-import {ReplyProto,ReqProto} from "../msg-proto";
-import { Observable ,of} from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ReplyProto, ReqProto } from "../msg-proto";
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
-  ws: WebSocket;
+
 
   constructor(
     public http: HttpClient,
   ) { }
 
-  // 返回一个可观测的流，包括服务器返回的消息
-  createObservableSocket(url: string): Observable<any> {
-    this.ws = new WebSocket(url);
-    return new Observable(
-      observer => {
-        this.ws.onmessage = (event) => observer.next(event.data);
-        this.ws.onerror = (event) => observer.error(event);
-        this.ws.onclose = (event) => observer.complete();
+  getAllFile() {
+    return this.http.get<ReplyProto>('/log-api/allFile')
+  }
+  listToTree(arr: string[]) {
+    let ret:FileNode[]= [];
+    for (let i = 0; i < arr.length; ++i) {
+      let path = arr[i].split("/");
+      let _ret = ret;
+      for (let j = 0; j < path.length; ++j) {
+        let filename = path[j];
+        let obj:FileNode = null;
+        for (let k = 0; k < _ret.length; ++k) {
+          let _obj = _ret[k];
+          if (_obj.filename === filename) {
+            obj = _obj;
+            break;
+          }
+        }
+        if (!obj) {
+          obj=new FileNode;
+          obj.filename = filename;
+          if (filename.indexOf(".") < 0) {
+            obj.children = []
+            obj.isFile=false
+          }else {
+            obj.isFile=true
+            obj.children=null
+          }
+          _ret.push(obj);
+        }
+        if (obj.children) _ret = obj.children;
       }
-    )
     }
-  // 向服务器端发送消息
-  sendMessage(message: any) {
-    this.ws.send(JSON.stringify(message));
+    return ret;
   }
+}
 
-  getAllFile(): Observable<ReplyProto> {
-    return this.http.get<ReplyProto>(`/log-api/allFile`)
-  }
-
+export class FileNode {
+  children: FileNode[];
+  filename: string;
+  isFile: boolean;
 }

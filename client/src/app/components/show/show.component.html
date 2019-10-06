@@ -1,9 +1,42 @@
-<div class="main">
-    <div class="left">
-        <div *ngFor="let v of fileData">
-            <button mat-raised-button color="primary" class="button" (click)="getLogFile(v.path)">{{v.name}}</button>
-        </div>
+<div class="main" #main>
+    <div class='leftDiv' [ngStyle]='leftWidthStyleMethod()' [hidden]="isLeftHidden" #left>
+
+        <!-- >>>>>>>>>> 文件树 >>>>>>>> -->
+        <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class='example-tree'>
+
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+                <li class='tree-node-li'>
+                    <mat-icon class="icon" svgIcon="log">
+                    </mat-icon>
+                    {{node.filename}}
+                </li>
+            </mat-tree-node>
+
+            <mat-nested-tree-node *matTreeNodeDef="let node; when: hasNestedChild">
+                <li>
+                    <div>
+                        <div matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename" class='iconDiv'>
+                            <mat-icon *ngIf='nestedTreeControl.isExpanded(node)' class="icon" svgIcon="arrow_down">
+                            </mat-icon>
+                            <mat-icon *ngIf='!nestedTreeControl.isExpanded(node)' class="icon" svgIcon="arrow_right">
+                            </mat-icon>
+                        </div>
+                        {{node.filename}}
+                    </div>
+                    <ul [class.example-tree-invisible]="!nestedTreeControl.isExpanded(node)">
+                        <ng-container matTreeNodeOutlet></ng-container>
+                    </ul>
+                </li>
+            </mat-nested-tree-node>
+        </mat-tree>
+
+        <!-- <<<<<<<<<<< 文件树 <<<<<<<<<<< -->
     </div>
-    <div class="right" [innerHTML]='logText'>
+    <div class='cutOff' [ngStyle]='cutOffLeftMethod()' #cutOff [hidden]='isLeftHidden'></div>
+    <div class='rightDiv' [ngStyle]='rightWidthStyleMethod()' #right>
+
+    </div>
+    <div class='topFileName'>
+        {{nowFile}}
     </div>
 </div>
