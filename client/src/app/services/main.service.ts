@@ -9,22 +9,58 @@ import { Observable, of } from 'rxjs';
 })
 export class MainService {
 
+  api = '/log-api'
 
   constructor(
     public http: HttpClient,
   ) { }
 
   getAllFile() {
-    return this.http.get<ReplyProto>('/log-api/allFile')
+    return this.http.get<ReplyProto>(this.api + '/allFile')
   }
+
+  source: EventSource
+  getFileText(filePath: string) {
+    if (filePath == null || filePath == '' || typeof filePath == 'undefined') {
+      console.error('filePath is null or empty')
+      return
+    }
+    let req: ReqProto = {
+      data: filePath
+    }
+    this.source = new EventSource(this.api + '/show?q=' + JSON.stringify(req))
+    return new Observable<string>(
+      observer => {
+        this.source.onopen = () => {
+          console.log('sse通道已建立…')
+        }
+        this.source.onmessage = (event) => observer.next(event.data);
+        this.source.onerror = (event) => {
+          observer.error(event);
+        };
+      }
+    )
+  }
+
+  sseClose() {
+    if (this.source != null) {
+      this.source.close();
+    }
+  }
+
+  // 这个函数的每个文件路径最终都应指向一个文件
   listToTree(arr: string[]) {
-    let ret:FileNode[]= [];
+    if (arr == null || arr.length == 0) {
+      console.error("arr is null or empty")
+      return
+    }
+    let ret: FileNode[] = [];
     for (let i = 0; i < arr.length; ++i) {
       let path = arr[i].split("/");
       let _ret = ret;
       for (let j = 0; j < path.length; ++j) {
         let filename = path[j];
-        let obj:FileNode = null;
+        let obj: FileNode = null;
         for (let k = 0; k < _ret.length; ++k) {
           let _obj = _ret[k];
           if (_obj.filename === filename) {
@@ -33,18 +69,19 @@ export class MainService {
           }
         }
         if (!obj) {
-          obj=new FileNode;
+          obj = new FileNode;
           obj.filename = filename;
-          if (filename.indexOf(".") < 0) {
+          if (j != path.length - 1) {
             obj.children = []
-            obj.isFile=false
-          }else {
-            obj.isFile=true
-            obj.children=null
+            obj.isFile = false
+          } else {
+            obj.isFile = true
+            obj.children = null
           }
           _ret.push(obj);
         }
         if (obj.children) _ret = obj.children;
+        else obj.filePath = arr[i]
       }
     }
     return ret;
@@ -55,4 +92,6 @@ export class FileNode {
   children: FileNode[];
   filename: string;
   isFile: boolean;
+  // 如果是文件，会存储它的文件路径
+  filePath: string
 }

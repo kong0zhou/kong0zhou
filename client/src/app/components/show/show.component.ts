@@ -1,9 +1,9 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import {NestedTreeControl} from '@angular/cdk/tree';
-import { MainService,FileNode } from "../../services/main.service"
-import {MatTreeNestedDataSource} from '@angular/material/tree';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { MainService, FileNode } from "../../services/main.service"
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { ReplyProto, ReqProto } from "../../msg-proto";
-import {BehaviorSubject} from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 // import { default as AnsiUp } from 'ansi_up'
 
@@ -51,12 +51,13 @@ export class ShowComponent implements OnInit {
   }
   //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+  // >>>>>>>>>>>> 文件树 >>>>>>>>>>>
   nestedTreeControl: NestedTreeControl<FileNode>;
   nestedDataSource: MatTreeNestedDataSource<FileNode>;
   hasNestedChild = (_: number, nodeData: FileNode) => !nodeData.isFile;
   getChildren = (node: FileNode) => node.children;
 
-  expand(node){
+  expand(node) {
     this.nestedTreeControl.expand(node)
     console.log('click')
   }
@@ -65,7 +66,8 @@ export class ShowComponent implements OnInit {
     this.nestedTreeControl = new NestedTreeControl<FileNode>(this.getChildren);
     this.nestedDataSource = new MatTreeNestedDataSource();
 
-    // this.nestedTreeControl.expand
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
     // >>>>>>>> 捕捉ctrl+B的事件  >>>>>>>>>>>>>
     document.onkeydown = (event) => {
       if (event.keyCode == 17) {
@@ -119,7 +121,7 @@ export class ShowComponent implements OnInit {
           // this.allfiles = data.data
           console.log(JSON.stringify(this.service.listToTree(data.data)))
           this.nestedDataSource.data = this.service.listToTree(data.data)
-        }else{
+        } else {
           console.error(data.msg)
         }
       },
@@ -131,6 +133,7 @@ export class ShowComponent implements OnInit {
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   }
 
+  //>>>>>>>>>>>隐藏左边div事件>>>>>>>>>>>>>>>>>>>>>>>
   isLeftHidden: boolean = false
   // 暂时存储左边div隐藏前的div的宽度
   tempLeftWidth: number
@@ -147,5 +150,28 @@ export class ShowComponent implements OnInit {
   nowFile: string = ''
   selectFile(file: string) {
     this.nowFile = file
+  }
+  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+  logText:string='123'
+  clickFile(node: FileNode) {
+    if (node.filePath == '' || typeof node.filePath == 'undefined' || node.filePath == null) {
+      console.error('node.filePath is null or undefined')
+      return
+    }
+    console.log(node.filePath)
+    this.service.sseClose()
+    this.service.getFileText(node.filePath).subscribe(
+      (data) => {
+        // console.log(data)
+        let reply = JSON.parse(data)
+        console.log(reply.data)
+        this.logText=this.logText+reply.data
+      },
+      (error) => {
+        console.error(error)
+        // this.service.sseClose()
+      }
+    )
   }
 }
