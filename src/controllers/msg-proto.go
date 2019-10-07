@@ -114,6 +114,60 @@ func (t *ReplyProto) DefinedResp(status int, msg string, data interface{}, w htt
 	return nil
 }
 
+func (t *ReplyProto) SseError(errMsg string, sse *Sse) (err error) {
+	if t == nil {
+		err = fmt.Errorf(`replyProto is null`)
+		logs.Error(err)
+		return
+	}
+	if sse == nil {
+		err = fmt.Errorf("sse is nil")
+		logs.Error(err)
+		return
+	}
+	t.Status = -1
+	t.Msg = errMsg
+	t.RowCount = 0
+	response, err := json.Marshal(&t)
+	err = sse.Write(SseData{Data: string(response)})
+	if err != nil {
+		logs.Error(err)
+		return err
+	}
+	if err != nil {
+		logs.Error(err)
+		return err
+	}
+	return nil
+}
+
+func (t *ReplyProto) SseSuccess(data interface{}, sse *Sse) (err error) {
+	if t == nil {
+		err = fmt.Errorf(`replyProto is null`)
+		logs.Error(err)
+		return
+	}
+
+	if sse == nil {
+		err = fmt.Errorf("sse is nil")
+		logs.Error(err)
+		return
+	}
+	t.Status = 0
+	t.Data = data
+	t.RowCount = 0
+	response, err := json.Marshal(&t)
+	err = sse.Write(SseData{Data: string(response)})
+	if err != nil {
+		return err
+	}
+	if err != nil {
+		logs.Error(err)
+		return err
+	}
+	return nil
+}
+
 //前端请求数据通讯协议
 type ReqProto struct {
 	Action   string      `json:"action"` //请求类型GET/POST/PUT/DELETE

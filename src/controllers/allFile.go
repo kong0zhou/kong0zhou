@@ -19,11 +19,6 @@ func AllFile(w http.ResponseWriter, r *http.Request) {
 	reply, err := NewReplyProto(`GET`, `/allFile`)
 	if err != nil {
 		logs.Error(err)
-		err = reply.ErrorResp(err.Error(), w)
-		if err != nil {
-			logs.Error(err)
-			return
-		}
 		return
 	}
 	if r.Method != "GET" {

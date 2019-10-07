@@ -5,7 +5,7 @@
         <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class='example-tree'>
 
             <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-                <li class='tree-node-li'>
+                <li class='tree-node-li' (click)="clickFile(node)">
                     <mat-icon class="icon" svgIcon="log">
                     </mat-icon>
                     {{node.filename}}
@@ -33,8 +33,7 @@
         <!-- <<<<<<<<<<< 文件树 <<<<<<<<<<< -->
     </div>
     <div class='cutOff' [ngStyle]='cutOffLeftMethod()' #cutOff [hidden]='isLeftHidden'></div>
-    <div class='rightDiv' [ngStyle]='rightWidthStyleMethod()' #right>
-
+    <div class='rightDiv' [ngStyle]='rightWidthStyleMethod()' [innerText]='logText' #right>
     </div>
     <div class='topFileName'>
         {{nowFile}}

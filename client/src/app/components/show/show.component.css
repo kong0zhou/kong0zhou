@@ -69,6 +69,31 @@
     z-index: -1;
 }
 
+.rightDiv::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(185, 185, 185);
+}
+
+.rightDiv::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+.rightDiv::-webkit-scrollbar-thumb {
+    background: rgb(185, 185, 185);;
+    border-radius: 2px;
+}
+
+.rightDiv::-webkit-scrollbar-thumb:hover {
+    background: rgb(185, 185, 185);;
+}
+
+.rightDiv::-webkit-scrollbar-corner {
+    background: rgb(185, 185, 185);;
+}
+
+
 .cutOff {
     border: 0.5px solid rgb(185, 185, 185);
     width: 0px;
