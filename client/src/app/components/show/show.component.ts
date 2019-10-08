@@ -5,6 +5,8 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { ReplyProto, ReqProto } from "../../msg-proto";
 import { BehaviorSubject } from 'rxjs';
 
+import {LogHighLightPipe} from '../../pipe/log-high-light.pipe'
+
 // import { default as AnsiUp } from 'ansi_up'
 
 @Component({
@@ -155,7 +157,11 @@ export class ShowComponent implements OnInit {
 
   // >>>>>>>>>>>>>>获得log文件的内容>>>>>>>>>>>>>>>>
   nowFileName:string='';
-  logText:string=''
+
+  logText:string='';
+  logHTML:string='';
+
+  logTextPipe :LogHighLightPipe=new LogHighLightPipe;
   clickFile(node: FileNode) {
     if (node.filePath == '' || typeof node.filePath == 'undefined' || node.filePath == null) {
       console.error('node.filePath is null or undefined')
@@ -166,6 +172,7 @@ export class ShowComponent implements OnInit {
     if (this.service.source!=null){
       this.service.sseClose()
       this.logText=''
+      this.logHTML=''
     }
     this.service.getFileText(node.filePath).subscribe(
       (data) => {
@@ -173,8 +180,9 @@ export class ShowComponent implements OnInit {
         let reply = JSON.parse(data)
         console.log(reply.data)
         this.logText=this.logText+reply.data
+        this.logHTML=this.logHTML+this.logTextPipe.transform(reply.data)+'<br>';
         let right = <HTMLDivElement>(this.right.nativeElement)
-        right.innerText=this.logText;
+        right.innerHTML=this.logHTML;
       },
       (error) => {
         console.error(error)
