@@ -21,11 +21,13 @@ import {
   MatIconModule,MatRippleModule,MatDatepickerModule,MatNativeDateModule,
   MatSidenavModule,MatTreeModule,MatButtonToggleModule,
 } from '@angular/material';
+import { LogHighLightPipe } from './pipe/log-high-light.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowComponent
+    ShowComponent,
+    LogHighLightPipe
   ],
   imports: [
     MatButtonModule,
