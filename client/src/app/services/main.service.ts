@@ -43,9 +43,7 @@ export class MainService {
   }
 
   sseClose() {
-    if (this.source != null) {
       this.source.close();
-    }
   }
 
   // 这个函数的每个文件路径最终都应指向一个文件

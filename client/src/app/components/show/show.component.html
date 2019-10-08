@@ -33,9 +33,8 @@
         <!-- <<<<<<<<<<< 文件树 <<<<<<<<<<< -->
     </div>
     <div class='cutOff' [ngStyle]='cutOffLeftMethod()' #cutOff [hidden]='isLeftHidden'></div>
-    <div class='rightDiv' [ngStyle]='rightWidthStyleMethod()' [innerText]='logText' #right>
+    <div class='rightDiv' [ngStyle]='rightWidthStyleMethod()' #right>
     </div>
-    <div class='topFileName'>
-        {{nowFile}}
+    <div class='topFileName' [innerText]='nowFileName'>
     </div>
 </div>

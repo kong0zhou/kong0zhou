@@ -153,20 +153,28 @@ export class ShowComponent implements OnInit {
   }
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-  logText:string='123'
+  // >>>>>>>>>>>>>>获得log文件的内容>>>>>>>>>>>>>>>>
+  nowFileName:string='';
+  logText:string=''
   clickFile(node: FileNode) {
     if (node.filePath == '' || typeof node.filePath == 'undefined' || node.filePath == null) {
       console.error('node.filePath is null or undefined')
       return
     }
-    console.log(node.filePath)
-    this.service.sseClose()
+    // console.log(node.filePath)
+    this.nowFileName=node.filename;
+    if (this.service.source!=null){
+      this.service.sseClose()
+      this.logText=''
+    }
     this.service.getFileText(node.filePath).subscribe(
       (data) => {
         // console.log(data)
         let reply = JSON.parse(data)
         console.log(reply.data)
         this.logText=this.logText+reply.data
+        let right = <HTMLDivElement>(this.right.nativeElement)
+        right.innerText=this.logText;
       },
       (error) => {
         console.error(error)
@@ -174,4 +182,5 @@ export class ShowComponent implements OnInit {
       }
     )
   }
+  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
