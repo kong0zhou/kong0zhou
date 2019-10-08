@@ -34,7 +34,8 @@ func main() {
 	go func() {
 		for {
 			time.Sleep(500 * time.Millisecond)
-			logs.Info(`当前协程数：`, runtime.NumGoroutine())
+			// logs.Info(`当前协程数：`, runtime.NumGoroutine())
+			fmt.Println(`当前协程数：`, runtime.NumGoroutine())
 		}
 	}()
 	// ===============================
