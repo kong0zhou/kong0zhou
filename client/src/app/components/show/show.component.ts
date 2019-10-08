@@ -114,7 +114,10 @@ export class ShowComponent implements OnInit {
       document.onmousemove = null
     }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
+    // >>>>>>>>>>>>>> right div滚动条自动滚到底部 >>>>>>>>>>>>>>
+    let rightD =<HTMLDivElement>(this.right.nativeElement);
+    rightD.scrollTop=rightD.scrollHeight;
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // >>>>>>>>>>>>>>> 从后端获取所有的文件名和路径 >>>>>>>>>>>>>>>>
 
     this.service.getAllFile().subscribe(
@@ -156,6 +159,7 @@ export class ShowComponent implements OnInit {
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   // >>>>>>>>>>>>>>获得log文件的内容>>>>>>>>>>>>>>>>
+  nowFilePath:string=''
   nowFileName:string='';
 
   logText:string='';
@@ -168,6 +172,13 @@ export class ShowComponent implements OnInit {
       return
     }
     // console.log(node.filePath)
+    // 检查是否已经选中了这个node
+    if (node.filePath==this.nowFilePath){
+      return
+    }else{
+      this.nowFilePath = node.filePath
+    }
+
     this.nowFileName=node.filename;
     if (this.service.source!=null){
       this.service.sseClose()
@@ -183,6 +194,8 @@ export class ShowComponent implements OnInit {
         this.logHTML=this.logHTML+this.logTextPipe.transform(reply.data)+'<br>';
         let right = <HTMLDivElement>(this.right.nativeElement)
         right.innerHTML=this.logHTML;
+        // right div滚动条自动滚到底部
+        right.scrollTop=right.scrollHeight
       },
       (error) => {
         console.error(error)
