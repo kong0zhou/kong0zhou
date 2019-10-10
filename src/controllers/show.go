@@ -23,6 +23,8 @@ func Show(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/event-stream")
 	w.Header().Set("Cache-Control", "no-cache")
 	w.Header().Set("Connection", "keep-alive")
+
+	w.Header().Set("Transfer-Encoding", "chunked")
 	reply, err := NewReplyProto(`GET`, `/show`)
 	if err != nil {
 		logs.Error(err)
@@ -106,8 +108,8 @@ func Show(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer file.Close()
-	rd := bufio.NewReader(file)
 	file.Seek(0, 0)
+	rd := bufio.NewReader(file)
 	for {
 		line, err := rd.ReadBytes('\n')
 		select {
@@ -115,6 +117,13 @@ func Show(w http.ResponseWriter, r *http.Request) {
 			return
 		default:
 			if err == io.EOF {
+				if len(line) != 0 {
+					err = reply.SseSuccess(string(line), sse)
+					if err != nil {
+						logs.Error(err)
+						return
+					}
+				}
 				time.Sleep(500 * time.Millisecond)
 				continue
 			} else if err != nil {
@@ -126,6 +135,7 @@ func Show(w http.ResponseWriter, r *http.Request) {
 				}
 				return
 			}
+			// fmt.Println(string(line))
 			err = reply.SseSuccess(string(line), sse)
 			if err != nil {
 				logs.Error(err)

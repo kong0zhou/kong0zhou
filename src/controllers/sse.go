@@ -19,9 +19,11 @@ id:%s
 
 event:%s
 
-Retry:%d
+retry:%d
 
 data:%s
+
+
 `
 
 func (s SseData) convertText() (text string, err error) {
@@ -31,7 +33,7 @@ func (s SseData) convertText() (text string, err error) {
 		return ``, err
 	}
 	text = fmt.Sprintf(sseText, s.ID, s.Event, s.Retry, s.Data)
-	logs.Info(text)
+	// logs.Info(text)
 	return text, nil
 }
 
@@ -77,7 +79,11 @@ func (s *Sse) Write(data SseData) (err error) {
 			logs.Error(err)
 			return err
 		}
-		fmt.Fprint(s.w, sseText)
+		_, err = fmt.Fprint(s.w, sseText)
+		if err != nil {
+			logs.Error(err)
+			return err
+		}
 		s.f.Flush()
 		return nil
 	}

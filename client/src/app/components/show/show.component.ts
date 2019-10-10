@@ -5,7 +5,7 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { ReplyProto, ReqProto } from "../../msg-proto";
 import { BehaviorSubject } from 'rxjs';
 
-import {LogHighLightPipe} from '../../pipe/log-high-light.pipe'
+import { LogHighLightPipe } from '../../pipe/log-high-light.pipe'
 
 // import { default as AnsiUp } from 'ansi_up'
 
@@ -114,10 +114,6 @@ export class ShowComponent implements OnInit {
       document.onmousemove = null
     }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    // >>>>>>>>>>>>>> right div滚动条滚到底部 >>>>>>>>>>>>>>
-    let rightD =<HTMLDivElement>(this.right.nativeElement);
-    rightD.scrollTop=rightD.scrollHeight;
-    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // >>>>>>>>>>>>>>> 从后端获取所有的文件名和路径 >>>>>>>>>>>>>>>>
 
     this.service.getAllFile().subscribe(
@@ -159,13 +155,15 @@ export class ShowComponent implements OnInit {
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   // >>>>>>>>>>>>>>获得log文件的内容>>>>>>>>>>>>>>>>
-  nowFilePath:string=''
-  nowFileName:string='';
+  nowFilePath: string = ''
+  nowFileName: string = '';
 
-  logText:string='';
-  logHTML:string='';
+  logText: string = '';
+  logHTML: string = '';
 
-  logTextPipe :LogHighLightPipe=new LogHighLightPipe;
+  canScroll: boolean = false;
+
+  logTextPipe: LogHighLightPipe = new LogHighLightPipe;
   clickFile(node: FileNode) {
     if (node.filePath == '' || typeof node.filePath == 'undefined' || node.filePath == null) {
       console.error('node.filePath is null or undefined')
@@ -173,29 +171,38 @@ export class ShowComponent implements OnInit {
     }
     // console.log(node.filePath)
     // 检查是否已经选中了这个node
-    if (node.filePath==this.nowFilePath){
+    if (node.filePath == this.nowFilePath) {
       return
-    }else{
+    } else {
       this.nowFilePath = node.filePath
     }
 
-    this.nowFileName=node.filename;
-    if (this.service.source!=null){
+    this.nowFileName = node.filename;
+    if (this.service.source != null) {
       this.service.sseClose()
-      this.logText=''
-      this.logHTML=''
+      this.logText = ''
+      this.logHTML = ''
     }
+
+    let right = <HTMLDivElement>(this.right.nativeElement)
     this.service.getFileText(node.filePath).subscribe(
       (data) => {
-        // console.log(data)
+        // right.scrollTop = right.scrollHeight
+        if (right.scrollTop + right.clientHeight <= right.scrollHeight+2 && right.scrollTop + right.clientHeight >= right.scrollHeight-2) {
+          this.canScroll = true;
+          console.log('在底部')
+        } else {
+          this.canScroll = false;
+        }
         let reply = JSON.parse(data)
         console.log(reply.data)
-        this.logText=this.logText+reply.data
-        this.logHTML=this.logHTML+this.logTextPipe.transform(reply.data)+'<br>';
-        let right = <HTMLDivElement>(this.right.nativeElement)
-        right.innerHTML=this.logHTML;
+        this.logText = this.logText + reply.data
+        this.logHTML = this.logHTML + this.logTextPipe.transform(reply.data) + '<br>';
+        right.innerHTML = this.logHTML;
         // right div滚动条自动滚到底部
-        right.scrollTop=right.scrollHeight
+        if (this.canScroll) {
+          right.scrollTop = right.scrollHeight
+        }
       },
       (error) => {
         console.error(error)

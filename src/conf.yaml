@@ -3,5 +3,5 @@ fileName:
 - kz
 - logShow
 
-dirPath: ./inFiles
+dirPath: ./logs
 logMaxSize: 5000

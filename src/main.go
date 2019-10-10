@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"time"
 
 	"./common"
 	"./controllers"
@@ -37,6 +38,13 @@ func main() {
 	// 	}
 	// }()
 	// ===============================
+
+	go func() {
+		for {
+			logs.Info(`this  is a test`)
+			time.Sleep(5 * time.Second)
+		}
+	}()
 	mux := http.NewServeMux()
 	mux.HandleFunc("/show", controllers.ErrorHandler(controllers.Show))
 	mux.HandleFunc(`/allFile`, controllers.ErrorHandler(controllers.AllFile))
