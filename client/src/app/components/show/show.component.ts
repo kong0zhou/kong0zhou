@@ -114,7 +114,7 @@ export class ShowComponent implements OnInit {
       document.onmousemove = null
     }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    // >>>>>>>>>>>>>> right div滚动条自动滚到底部 >>>>>>>>>>>>>>
+    // >>>>>>>>>>>>>> right div滚动条滚到底部 >>>>>>>>>>>>>>
     let rightD =<HTMLDivElement>(this.right.nativeElement);
     rightD.scrollTop=rightD.scrollHeight;
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
