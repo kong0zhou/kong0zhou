@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,Optional, SkipSelf } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShowComponent } from './components/show/show.component';
+import { LoginComponent } from './components/login/login.component';
 
 // >>>>>>>>> 加载icon库 >>>>>>>>>>
 import { loadSvgsources } from 'src/app/icon.svg';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
+// >>>>>>>>>>>module>>>>>>>>>>>>
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { ToastrModule } from 'ngx-toastr';
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>> material >>>>>>>>>>
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatTableModule, MatButtonModule, MatPaginatorModule,
   MatCardModule, MatDialogModule, MatSnackBarModule,
@@ -21,13 +26,17 @@ import {
   MatIconModule,MatRippleModule,MatDatepickerModule,MatNativeDateModule,
   MatSidenavModule,MatTreeModule,MatButtonToggleModule,
 } from '@angular/material';
+import {ErrorStateMatcher,ShowOnDirtyErrorStateMatcher} from '@angular/material/core';
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<,,
+
 import { LogHighLightPipe } from './pipe/log-high-light.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent,
-    LogHighLightPipe
+    LogHighLightPipe,
+    LoginComponent
   ],
   imports: [
     MatButtonModule,
@@ -38,10 +47,19 @@ import { LogHighLightPipe } from './pipe/log-high-light.pipe';
     HttpClientModule,
     MatTreeModule,
     MatIconModule,
-    // MatButtonToggleModule,
-    // MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule ,
+    ToastrModule.forRoot({
+      timeOut: 20000,
+      positionClass: 'toast-top-center'
+    }),
+    // MatTableModule,
   ],
-  providers: [],
+  providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

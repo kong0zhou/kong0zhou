@@ -1,7 +1,10 @@
-# fileName 与下面的 filePath 一一对应
-fileName: 
-- kz
-- logShow
-
 dirPath: ./logs
 logMaxSize: 5000
+
+# 这个仅用于测试,真正使用时要自定义
+uid: test
+password: test
+
+sessionKey: test
+# 单位是s
+sessionMaxAge: 43200

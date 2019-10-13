@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"time"
 
 	"./common"
 	"./controllers"
@@ -29,6 +28,12 @@ func main() {
 		logs.Error(err)
 		return
 	}
+
+	err = controllers.InitVariable()
+	if err != nil {
+		logs.Error(err)
+		return
+	}
 	// ==============查看协程数量=============
 	// go func() {
 	// 	for {
@@ -39,15 +44,18 @@ func main() {
 	// }()
 	// ===============================
 
-	go func() {
-		for {
-			logs.Info(`this  is a test`)
-			time.Sleep(5 * time.Second)
-		}
-	}()
+	// go func() {
+	// 	for {
+	// 		logs.Info(`this  is a test`)
+	// 		time.Sleep(5 * time.Second)
+	// 	}
+	// }()
 	mux := http.NewServeMux()
-	mux.HandleFunc("/show", controllers.ErrorHandler(controllers.Show))
-	mux.HandleFunc(`/allFile`, controllers.ErrorHandler(controllers.AllFile))
+	mux.HandleFunc("/apiShow", controllers.ErrorHandler(controllers.SessionCheck(controllers.Show)))
+	mux.HandleFunc(`/apiAllFile`, controllers.ErrorHandler(controllers.SessionCheck(controllers.AllFile)))
+	mux.HandleFunc(`/apiLogin`, controllers.ErrorHandler(controllers.Login))
+	mux.HandleFunc(`/apiCheckUser`, controllers.ErrorHandler(controllers.CheckUser))
+	mux.Handle(`/`, http.StripPrefix(`/`, controllers.NewDistHandle(`../client/dist/client`)))
 	logs.Info("http服务器启动，端口：8083")
 	err = http.ListenAndServe(":8083", mux)
 	if err != nil {

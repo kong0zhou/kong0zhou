@@ -9,14 +9,14 @@ import { Observable, of } from 'rxjs';
 })
 export class MainService {
 
-  api = '/log-api'
+  api = ''
 
   constructor(
     public http: HttpClient,
   ) { }
 
   getAllFile() {
-    return this.http.get<ReplyProto>(this.api + '/allFile')
+    return this.http.get<ReplyProto>(this.api + '/apiAllFile')
   }
 
   source: EventSource
@@ -28,7 +28,7 @@ export class MainService {
     let req: ReqProto = {
       data: filePath
     }
-    this.source = new EventSource(this.api + '/show?q=' + JSON.stringify(req))
+    this.source = new EventSource(this.api + '/apiShow?q=' + JSON.stringify(req))
     return new Observable<string>(
       observer => {
         this.source.onopen = () => {
@@ -83,6 +83,20 @@ export class MainService {
       }
     }
     return ret;
+  }
+
+  login(uid:string,password:string){
+    let req: ReqProto={
+      data:{
+        uid:uid,
+        password:password,
+      }
+    }
+    return this.http.put<ReplyProto>(this.api+'/apiLogin',req)
+  }
+
+  checkUser(){
+    return this.http.get<ReplyProto>(this.api+'/apiCheckUser')
   }
 }
 

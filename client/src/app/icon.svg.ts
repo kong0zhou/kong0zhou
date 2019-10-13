@@ -5,4 +5,5 @@ export const loadSvgsources = (ir: MatIconRegistry, ds: DomSanitizer) => {
     ir.addSvgIcon('arrow_down', ds.bypassSecurityTrustResourceUrl(`assets/icon/arrow_down.svg`));
     ir.addSvgIcon('arrow_right', ds.bypassSecurityTrustResourceUrl(`assets/icon/arrow_right.svg`));
     ir.addSvgIcon('log', ds.bypassSecurityTrustResourceUrl(`assets/icon/log.svg`));
+    ir.addSvgIcon('code', ds.bypassSecurityTrustResourceUrl(`assets/icon/code.svg`));
 }

@@ -108,7 +108,33 @@ func Show(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer file.Close()
-	file.Seek(0, 0)
+	fi, err := file.Stat()
+	if err != nil {
+		logs.Error(err)
+		err = reply.SseError(err.Error(), sse)
+		if err != nil {
+			logs.Error(err)
+			return
+		}
+		return
+	}
+	// 指定返回前端的字节数
+	var lmz int64
+	if fi.Size() < logMaxSize {
+		lmz = fi.Size()
+	} else {
+		lmz = logMaxSize
+	}
+	_, err = file.Seek(-lmz, 2)
+	if err != nil {
+		logs.Error(err)
+		err = reply.SseError(err.Error(), sse)
+		if err != nil {
+			logs.Error(err)
+			return
+		}
+		return
+	}
 	rd := bufio.NewReader(file)
 	for {
 		line, err := rd.ReadBytes('\n')

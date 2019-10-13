@@ -4,6 +4,7 @@ import { MainService, FileNode } from "../../services/main.service"
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { ReplyProto, ReqProto } from "../../msg-proto";
 import { BehaviorSubject } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 import { LogHighLightPipe } from '../../pipe/log-high-light.pipe'
 
@@ -21,6 +22,7 @@ export class ShowComponent implements OnInit {
 
   constructor(
     public service: MainService,
+    private toastr: ToastrService,
   ) { }
 
 
@@ -124,6 +126,7 @@ export class ShowComponent implements OnInit {
           this.nestedDataSource.data = this.service.listToTree(data.data)
         } else {
           console.error(data.msg)
+          this.toastr.error(data.msg, "错误提示")
         }
       },
       (err) => {
@@ -188,7 +191,7 @@ export class ShowComponent implements OnInit {
     this.service.getFileText(node.filePath).subscribe(
       (data) => {
         // right.scrollTop = right.scrollHeight
-        if (right.scrollTop + right.clientHeight <= right.scrollHeight+2 && right.scrollTop + right.clientHeight >= right.scrollHeight-2) {
+        if (right.scrollTop + right.clientHeight <= right.scrollHeight + 2 && right.scrollTop + right.clientHeight >= right.scrollHeight - 2) {
           this.canScroll = true;
           console.log('在底部')
         } else {
@@ -206,7 +209,9 @@ export class ShowComponent implements OnInit {
       },
       (error) => {
         console.error(error)
-        // this.service.sseClose()
+        this.service.sseClose()
+        this.logText = ''
+        this.logHTML = ''
       }
     )
   }

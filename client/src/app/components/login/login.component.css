@@ -1,0 +1,29 @@
+.input{
+    padding: 0px;
+    /* border: none ;  */
+    height: initial;
+}
+
+.formDiv{
+    border: 1px solid rgb(185, 185, 185);
+    border-radius:12px;
+    padding:16px;
+    width:180px;
+    margin:auto;
+}
+
+.main{
+    /* border: 1px solid rgb(0, 0, 0); */
+    text-align: center;
+}
+
+.icon {
+    flex: 1;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.button{
+    width:180px;
+    height:32px;
+}

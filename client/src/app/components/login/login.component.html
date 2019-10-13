@@ -1,0 +1,24 @@
+<div class="main" [ngStyle]="formDivStyle()">
+  <mat-icon class="icon" svgIcon="code">
+  </mat-icon>
+  <div class="formDiv">
+    <mat-form-field>
+      <mat-label>用户名</mat-label>
+      <input matInput placeholder="请输入用户名" class="input" [formControl]="uidFormControl" #uid
+        (keyup)="onKeyup(uid.value,'uid')">
+      <mat-error *ngIf="uidFormControl.hasError('required')">用户名不能为空</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>密码</mat-label>
+      <input matInput placeholder="请输入密码" class="input" [formControl]="passwordFormControl" #password
+        (keyup)="onKeyup(password.value,'password')" type="password">
+      <mat-error *ngIf="passwordFormControl.hasError('required')">密码不能为空</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" class="button" (click)="login()" [disabled]="
+          passwordFormControl.hasError('required') ||
+          uidFormControl.hasError('required')
+        ">登陆</button>
+  </div>
+</div>

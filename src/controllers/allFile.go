@@ -10,11 +10,6 @@ import (
 	"github.com/astaxie/beego/logs"
 )
 
-type fileData struct {
-	Name string `json:"name"`
-	Path string `json:"path"`
-}
-
 func AllFile(w http.ResponseWriter, r *http.Request) {
 	reply, err := NewReplyProto(`GET`, `/allFile`)
 	if err != nil {
