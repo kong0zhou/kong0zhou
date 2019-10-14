@@ -9,6 +9,11 @@ var ConfViper *viper.Viper
 
 func InitConf() (err error) {
 	ConfViper = viper.New()
+
+	ConfViper.BindEnv(`PASSWORD`)
+	ConfViper.BindEnv(`DIRPATH`)
+	ConfViper.BindEnv(`UID`)
+
 	ConfViper.SetConfigName(`conf`)
 	ConfViper.AddConfigPath(`./`)
 	ConfViper.SetConfigType(`yaml`)

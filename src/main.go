@@ -55,7 +55,7 @@ func main() {
 	mux.HandleFunc(`/apiAllFile`, controllers.ErrorHandler(controllers.SessionCheck(controllers.AllFile)))
 	mux.HandleFunc(`/apiLogin`, controllers.ErrorHandler(controllers.Login))
 	mux.HandleFunc(`/apiCheckUser`, controllers.ErrorHandler(controllers.CheckUser))
-	mux.Handle(`/`, http.StripPrefix(`/`, controllers.NewDistHandle(`../client/dist/client`)))
+	mux.Handle(`/`, http.StripPrefix(`/`, controllers.NewDistHandle(`./dist/client`)))
 	logs.Info("http服务器启动，端口：8083")
 	err = http.ListenAndServe(":8083", mux)
 	if err != nil {
