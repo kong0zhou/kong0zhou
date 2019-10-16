@@ -13,6 +13,7 @@ func InitConf() (err error) {
 	ConfViper.BindEnv(`PASSWORD`)
 	ConfViper.BindEnv(`DIRPATH`)
 	ConfViper.BindEnv(`UID`)
+	ConfViper.BindEnv(`SESSIONKEY`)
 
 	ConfViper.SetConfigName(`conf`)
 	ConfViper.AddConfigPath(`./`)

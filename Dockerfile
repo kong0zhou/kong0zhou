@@ -16,4 +16,5 @@ RUN mkdir logfiles
 ENV DIRPATH=./logfiles
 ENV UID=admin
 ENV PASSWORD=newtest
+ENV SESSIONKEY=yourkey
 CMD ["sh","-c","./src"]
