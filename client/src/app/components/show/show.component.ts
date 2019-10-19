@@ -63,7 +63,7 @@ export class ShowComponent implements OnInit {
 
   expand(node) {
     this.nestedTreeControl.expand(node)
-    console.log('click')
+    // console.log('click')
   }
 
   ngOnInit() {
@@ -76,24 +76,24 @@ export class ShowComponent implements OnInit {
     document.onkeydown = (event) => {
       if (event.keyCode == 17) {
         this.ctrlB++;
-        console.log(this.ctrlB)
+        // console.log(this.ctrlB)
       }
       else if (event.keyCode == 66 && this.ctrlB == 1) {
         this.ctrlB++;
-        console.log('在这里执行ctrl+B的函数')
+        // console.log('在这里执行ctrl+B的函数')
         this.lefthiddenChange()
         this.ctrlB--
-        console.log(this.ctrlB)
+        // console.log(this.ctrlB)
       }
       else {
         this.ctrlB = 0
-        console.log(this.ctrlB)
+        // console.log(this.ctrlB)
       }
     }
     document.onkeyup = (event) => {
       if (event.keyCode == 17) {
         this.ctrlB = 0;
-        console.log(this.ctrlB)
+        // console.log(this.ctrlB)
       }
     }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -112,7 +112,7 @@ export class ShowComponent implements OnInit {
       }
     }
     document.onmouseup = (e) => {
-      console.log('stop')
+      // console.log('stop')
       document.onmousemove = null
     }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -122,7 +122,7 @@ export class ShowComponent implements OnInit {
       (data) => {
         if (data.status == 0) {
           // this.allfiles = data.data
-          console.log(JSON.stringify(this.service.listToTree(data.data)))
+          // console.log(JSON.stringify(this.service.listToTree(data.data)))
           this.nestedDataSource.data = this.service.listToTree(data.data)
         } else {
           console.error(data.msg)
@@ -193,12 +193,12 @@ export class ShowComponent implements OnInit {
         // right.scrollTop = right.scrollHeight
         if (right.scrollTop + right.clientHeight <= right.scrollHeight + 2 && right.scrollTop + right.clientHeight >= right.scrollHeight - 2) {
           this.canScroll = true;
-          console.log('在底部')
+          // console.log('在底部')
         } else {
           this.canScroll = false;
         }
         let reply = JSON.parse(data)
-        console.log(reply.data)
+        // console.log(reply.data)
         this.logText = this.logText + reply.data
         this.logHTML = this.logHTML + this.logTextPipe.transform(reply.data) + '<br>';
         right.innerHTML = this.logHTML;

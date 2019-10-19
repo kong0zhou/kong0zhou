@@ -4,7 +4,8 @@ logMaxSize: 5000
 # 这个仅用于测试,真正使用时要自定义
 uid: test
 password: test
-
 sessionKey: test
 # 单位是s
 sessionMaxAge: 43200
+
+production: true

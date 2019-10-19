@@ -1,4 +1,4 @@
-# kong0zhou
+# logShow
 
 ## 简介
 logShow是一个实时查看日志文件的软件
@@ -12,6 +12,8 @@ logShow是一个实时查看日志文件的软件
 ### 用法
 
 以ubuntu为例：
+
+使用前需要现在电脑中安装docker
 
 ```sh
 docker pull ccr.ccs.tencentyun.com/kongzhou/logshow:v1
@@ -29,4 +31,4 @@ docker run \
 	ccr.ccs.tencentyun.com/kongzhou/logshow:v1
 ```
 
-最后只需要打开 localhost:8083 即可
+最后只需要用浏览器打开 localhost:8083 即可

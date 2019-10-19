@@ -2,3 +2,4 @@
 /src/inFiles
 .vscode
 /src/dist
+/testrundocker.sh

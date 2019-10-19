@@ -16,16 +16,16 @@ func main() {
 			return
 		}
 	}()
-	// =========初始化日志文件========
-	err := common.InitLogger()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
 	// ===========初始化配置文件===========
-	err = common.InitConf()
+	err := common.InitConf()
 	if err != nil {
 		logs.Error(err)
+		return
+	}
+	// =========初始化日志文件========
+	err = common.InitLogger()
+	if err != nil {
+		fmt.Println(err)
 		return
 	}
 
