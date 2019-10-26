@@ -20,11 +20,6 @@ func Show(w http.ResponseWriter, r *http.Request) {
 		logs.Error(err)
 		return
 	}
-	w.Header().Set("Content-Type", "text/event-stream")
-	w.Header().Set("Cache-Control", "no-cache")
-	w.Header().Set("Connection", "keep-alive")
-
-	w.Header().Set("Transfer-Encoding", "chunked")
 	reply, err := NewReplyProto(`GET`, `/show`)
 	if err != nil {
 		logs.Error(err)

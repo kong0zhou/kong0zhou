@@ -1,4 +1,4 @@
-dirPath: ./logs
+dirPath: ./inFiles
 logMaxSize: 5000
 
 # 这个仅用于测试,真正使用时要自定义
@@ -8,4 +8,4 @@ sessionKey: test
 # 单位是s
 sessionMaxAge: 43200
 
-production: true
+production: false

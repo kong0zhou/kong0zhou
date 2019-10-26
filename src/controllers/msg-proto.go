@@ -129,7 +129,7 @@ func (t *ReplyProto) SseError(errMsg string, sse *Sse) (err error) {
 	t.Msg = errMsg
 	t.RowCount = 0
 	response, err := json.Marshal(&t)
-	err = sse.Write(SseData{Data: string(response)})
+	err = sse.Write(SseData{Event: "error", Data: string(response)})
 	if err != nil {
 		logs.Error(err)
 		return err
@@ -157,7 +157,7 @@ func (t *ReplyProto) SseSuccess(data interface{}, sse *Sse) (err error) {
 	t.Data = data
 	t.RowCount = 0
 	response, err := json.Marshal(&t)
-	err = sse.Write(SseData{Data: string(response)})
+	err = sse.Write(SseData{Event: "message", Data: string(response)})
 	if err != nil {
 		return err
 	}

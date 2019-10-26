@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"runtime"
+	"time"
 
 	"./common"
 	"./controllers"
@@ -35,13 +37,13 @@ func main() {
 		return
 	}
 	// ==============查看协程数量=============
-	// go func() {
-	// 	for {
-	// 		time.Sleep(500 * time.Millisecond)
-	// 		// logs.Info(`当前协程数：`, runtime.NumGoroutine())
-	// 		fmt.Println(`当前协程数：`, runtime.NumGoroutine())
-	// 	}
-	// }()
+	go func() {
+		for {
+			time.Sleep(5 * time.Second)
+			// logs.Info(`当前协程数：`, runtime.NumGoroutine())
+			fmt.Println(`当前协程数：`, runtime.NumGoroutine())
+		}
+	}()
 	// ===============================
 
 	// go func() {
